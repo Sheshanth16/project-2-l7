@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
 
-    static dueToday() {
+    static dueToday() {         
       return this.findAll({
         where: {
           dueDate: {
