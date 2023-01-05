@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const request = require("supertest");
-var cheerio = require("cheerio");                                                             
+var cheerio = require("cheerio");
 const db = require("../models/index");
 const app = require("../app");
 //const todo = require("../models/todo");
@@ -15,7 +15,7 @@ describe("Todo test suite ", () => {
     server = app.listen(3000, () => {});
     agent = request.agent(server);
   });
-  afterAll(async () => {  
+  afterAll(async () => {
     await db.sequelize.close();
     server.close();
   });
