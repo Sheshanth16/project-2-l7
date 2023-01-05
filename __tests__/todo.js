@@ -15,7 +15,7 @@ describe("Todo test suite ", () => {
     server = app.listen(3000, () => {});
     agent = request.agent(server);
   });
-  afterAll(async () => {
+  afterAll(async () => {  
     await db.sequelize.close();
     server.close();
   });
